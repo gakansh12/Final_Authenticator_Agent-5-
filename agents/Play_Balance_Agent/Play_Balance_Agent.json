@@ -6,7 +6,8 @@
     "check_balance",
     "end_conversation",
     "record_user_intent",
-    "set_context_variable"
+    "set_context_variable",
+    "wrapup_menu"
   ],
   "childAgents": []
 }
