@@ -103,6 +103,9 @@
                 - "all_set" → "all set", "done"
                 
                 Immediately call {@TOOL: record_user_intent} with the mapped intent.
+                If mapped intent is "all_set":
+                    Play: "Thank you. Your call will end now."
+                    Call {@TOOL: end_session}
                 
                 - If Invalid or no input (attempt 1): 
                     Play: "I didn't get that. What do you want to do next? "

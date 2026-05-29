@@ -5,7 +5,8 @@
   "tools": [
     "call_payment_history_details",
     "record_user_intent",
-    "set_context_variable"
+    "set_context_variable",
+    "end_session"
   ],
   "childAgents": []
 }

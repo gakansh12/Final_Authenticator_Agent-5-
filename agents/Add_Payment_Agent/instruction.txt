@@ -251,6 +251,10 @@
                 - "all_set" → "all set", "done", "nothing else"
                 
                 Call {@TOOL: record_user_intent} with the mapped intent.
+
+                - IF mapped intent is "all_set":
+                    Play: "Thank you. Your call will end now."
+                    Call {@TOOL: end_session}
                 
                 - IF Invalid or no input (attempt 1): 
                     Play: "I didn't get that. What do you want to do next? You can say hear balance, payment history, make a payment, update payment, enroll autopay or something else. If you are done with billing and payments, say All Set."

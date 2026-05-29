@@ -1,0 +1,10 @@
+{
+  "name": "end-session",
+  "pythonFunction": {
+    "name": "end_session",
+    "pythonCode": "tools/end_session/python_function/python_code.py",
+    "description": "Ends the current conversation/session."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "end_session"
+}

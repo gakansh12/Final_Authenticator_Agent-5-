@@ -10,7 +10,8 @@
     "call_process_payment_submit",
     "record_user_intent",
     "set_context_variable",
-    "evaluate_and_route_payment_methods"
+    "evaluate_and_route_payment_methods",
+    "end_session"
   ],
   "childAgents": []
 }

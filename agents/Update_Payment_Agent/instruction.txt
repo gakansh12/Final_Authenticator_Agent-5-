@@ -185,6 +185,10 @@
                 - "all_set" → "all set", "done"
                 
                 Call {@TOOL: record_user_intent} with the mapped intent.
+
+                - IF mapped intent is "all_set":
+                    Play: "Thank you. Your call will end now."
+                    Call {@TOOL: end_session}
             </action>
         </step>
     </subtask>

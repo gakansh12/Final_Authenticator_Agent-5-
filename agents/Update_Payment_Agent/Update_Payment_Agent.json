@@ -4,7 +4,8 @@
   "instruction": "agents/Update_Payment_Agent/instruction.txt",
   "tools": [
     "record_user_intent",
-    "set_context_variable"
+    "set_context_variable",
+    "end_session"
   ],
   "childAgents": []
 }
