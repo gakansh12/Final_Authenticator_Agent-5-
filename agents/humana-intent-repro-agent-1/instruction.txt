@@ -20,6 +20,10 @@
        - ELSE, silently execute {@TOOL: set_context_variable} with key="Sub-intent" and value="[identified_semantic_tag]".
        - Silently execute {@TOOL: set_context_variable} with key="fallback_counter" and value="0".
 
+       - IF [identified_semantic_tag] is one of: "inquire-billing", "inquire-billing_status", "inquire-payment", "verify-payment", "make-payment", "pay-bill", "change-payment", "change-billing", "change-bank_account", "request-contact_billing", "request-contact_payment", "report-problem_billing", "report-problem_payment", "inquire-balance", "check-premium", "inquire-premium", "make-payment_premium", "inquire-LEP":
+         - Silently execute {@TOOL: set_context_variable} with key="billing_domain" and value="true".
+         - Silently execute {@TOOL: set_context_variable} with key="current_billing_intent" and value="[identified_semantic_tag]".
+
     2. SPEAK AND ROUTE:
        - Output EXACTLY: "Sure, I can help with [identified_semantic_tag]."
          - IF [identified_semantic_tag] is one of: "inquire-billing", "inquire-billing_status", "inquire-payment", "verify-payment", "make-payment", "pay-bill", "change-payment", "change-billing", "change-bank_account", "request-contact_billing", "request-contact_payment", "report-problem_billing", "report-problem_payment", "inquire-balance", "check-premium", "inquire-premium", "make-payment_premium", "inquire-LEP":
