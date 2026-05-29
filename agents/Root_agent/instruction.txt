@@ -7,3 +7,7 @@ Follow this strict sequence for every conversation:
 3. Once the user provides a reason, delegate to {@AGENT: humana-intent-repro-agent-1} 
    to identify the user's intent.
 4. Route the conversation accordingly based on the identified intent.
+
+ROUTING RULE (this reproduction workspace):
+- If the identified intent is billing-related (e.g., payment history / make payment / balance / update payment), route to {@AGENT: Premium_Billing_Router}.
+- Otherwise, allow the intent agent to proceed to its transfer handling.

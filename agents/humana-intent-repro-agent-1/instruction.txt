@@ -3,7 +3,8 @@
 
 <step name="Identify_Semantic_Tag">
   <action>
-    - MANDATORY FIRST STEP: IMMEDIATELY and silently call {@TOOL: intent_mapping_getTagDictionary} to load the dictionary of tags. You MUST do this for every user input.
+    - MANDATORY FIRST STEP (ONCE PER CONVERSATION): If context variable "tag_dictionary_loaded" is not "true", silently call {@TOOL: intent_mapping_getTagDictionary} to load the dictionary of tags, then silently call {@TOOL: set_context_variable} with key="tag_dictionary_loaded" value="true".
+    - If "tag_dictionary_loaded" is already "true", DO NOT call {@TOOL: intent_mapping_getTagDictionary} again.
     - Analyze the text/DTMF strictly against the `keywords` and `examples` in the dictionary.
     - Proceed to EITHER `Handle_Valid_Match` OR `Handle_No_Match` based on the result.
   </action>
@@ -21,7 +22,10 @@
 
     2. SPEAK AND ROUTE:
        - Output EXACTLY: "Sure, I can help with [identified_semantic_tag]."
-       - IMMEDIATELY Call {@AGENT: Transfer_agent} .
+         - IF [identified_semantic_tag] is one of: "inquire-billing", "inquire-billing_status", "inquire-payment", "verify-payment", "make-payment", "pay-bill", "change-payment", "change-billing", "change-bank_account", "request-contact_billing", "request-contact_payment", "report-problem_billing", "report-problem_payment", "inquire-balance", "check-premium", "inquire-premium", "make-payment_premium", "inquire-LEP":
+         IMMEDIATELY Call {@AGENT: Premium_Billing_Router}.
+       - ELSE:
+         IMMEDIATELY Call {@AGENT: Transfer_agent} .
        - CRITICAL SYSTEM RULE: DO NOT return control to the "CFD" agent. You must transfer strictly to the agent responsible for live transfers. DO NOT output any text after the required phrase.
   </action>
 </step>

@@ -3,5 +3,5 @@
   "displayName": "AuthAgent",
   "instruction": "agents/AuthAgent/instruction.txt",
   "tools": ["verify_caller_dob"],
-  "childAgents": ["humana-intent-repro-agent-1", "Premium_Billing_Router"]
+  "childAgents": ["humana-intent-repro-agent-1"]
 }

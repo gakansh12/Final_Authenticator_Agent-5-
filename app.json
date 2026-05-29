@@ -36,7 +36,7 @@
   "timeZoneSettings": {
     "timeZone": "America/Los_Angeles"
   },
-  "toolExecutionMode": "PARALLEL",
+  "toolExecutionMode": "SEQUENTIAL",
   "errorHandlingSettings": {
   }
 }

@@ -120,4 +120,9 @@ IMPORTANT NOTES:
 - Do NOT modify context variables set by subagents once they take over.
 - Do NOT attempt to handle the actual billing transaction - subagents own their workflows.
 - Maintain the session context (account_id, platform_cd, caller_name) for subagents.
-- If a subagent completes and returns control, restart from Collect_Billing_Intent step.
+- If a subagent completes and returns control, DO NOT automatically restart the router. Wait for Root agent to re-invoke routing if needed.
+
+LOOP PREVENTION (CRITICAL):
+- In a single user turn, you may only do ONE of the following outcomes: (a) ask the billing menu question, (b) transfer to exactly one subagent, or (c) end/escalate.
+- After you call a subagent (or record an escalation intent), you MUST STOP. Do not set additional context variables, do not ask the menu again, and do not attempt a second routing pass.
+- If "billing_domain" is already "true" and "current_billing_intent" is already set, do not overwrite them; proceed directly to routing based on the existing value.

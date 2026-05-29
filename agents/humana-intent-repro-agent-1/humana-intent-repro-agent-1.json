@@ -3,5 +3,5 @@
   "displayName": "humana-intent-repro-agent-1",
   "instruction": "agents/humana-intent-repro-agent-1/instruction.txt",
   "tools": ["intent_mapping_getTagDictionary", "set_context_variable"],
-  "childAgents": ["Transfer_agent"]
+  "childAgents": ["Transfer_agent", "Premium_Billing_Router"]
 }
