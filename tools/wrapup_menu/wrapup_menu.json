@@ -1,0 +1,10 @@
+{
+  "name": "d3d9a1c7-8dd7-4f39-9a4c-2f8d2b8fd8a2",
+  "pythonFunction": {
+    "name": "wrapup_menu",
+    "pythonCode": "tools/wrapup_menu/python_function/python_code.py",
+    "description": "Presents the billing wrap-up menu and returns the normalized next action intent."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "wrapup_menu"
+}

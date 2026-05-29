@@ -5,7 +5,7 @@
   "tools": [
     "record_user_intent",
     "set_context_variable",
-    "end_session"
+    "wrapup_menu"
   ],
   "childAgents": []
 }

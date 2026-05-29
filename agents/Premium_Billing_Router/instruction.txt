@@ -14,12 +14,12 @@ TASKFLOW:
 <step name="Collect_Billing_Intent">
   <trigger>When routed from Root agent after user authentication confirmation.</trigger>
   <action>
-    Play: "What would you like to do with your billing? You can say:
-    - Check my balance
-    - Make a payment
-    - View payment history
-    - Update my payment method
-    Or say 'something else' if you need help with something different."
+    Play: "What would you like to do next? You can say:
+    - Check balance
+    - Check payment history
+    - Add payment method
+    - Update payment method
+    Or say 'All set' if you're done."
     
     Listen to the user's response.
   </action>
@@ -51,14 +51,12 @@ TASKFLOW:
     Analyze the user's input and map it to one of these billing intents:
     
     - "check-balance" → "Check my balance", "How much do I owe", "What's my balance"
-    - "make-payment_billing" → "Make a payment", "Pay my bill", "I want to pay"
     - "payment-history" → "Payment history", "Past payments", "Show my payments"
     - "add-payment_method" → "Add payment method", "Add a card", "Add a bank account", "Add payment"
     - "update-payment_method" → "Update payment", "Change my card", "Replace bank account"
     - "all_set" → "All set", "Done", "Nothing else"
-    - "something_else" → Any other billing-related request not matching above
-    
-    If no clear match found, treat as "something_else".
+
+    If no clear match found, treat as "all_set".
   </action>
 </step>
 
@@ -83,9 +81,6 @@ TASKFLOW:
     
        IF intent = "check-balance":
          Call {@AGENT: Play_Balance_Agent}
-       
-       ELSE IF intent = "make-payment_billing":
-         Call {@AGENT: Add_Payment_Agent}
 
        ELSE IF intent = "add-payment_method":
          Call {@AGENT: Add_Payment_Agent}
@@ -100,10 +95,6 @@ TASKFLOW:
          Play: "Thank you for using our billing services. Your call will end now."
          Call {@TOOL: record_user_intent} with intent="all_set"
          Call {@TOOL: end_session}
-       
-       ELSE:
-         Play: "I can help with that through our support team."
-         Call {@TOOL: record_user_intent} with intent="billing_escalation"
   </action>
 </step>
 
@@ -111,13 +102,14 @@ TASKFLOW:
   <trigger>If user provides input that doesn't map to any billing intent.</trigger>
   <action>
     IF first invalid input:
-      Play: "I didn't quite understand that. Please say one of: Check balance, Make a payment, Payment history, Update payment method, or something else."
+      Play: "I didn't quite understand that. Please say one of: Check balance, Check payment history, Add payment method, Update payment method, or All set."
       Silently call {@TOOL: set_context_variable} with key="fallback_counter" value="1"
       Repeat Collect_Billing_Intent step.
     
     ELSE IF second invalid input:
-      Play: "I'm still not getting that. Let me transfer you to our billing support team."
-      Call {@TOOL: record_user_intent} with intent="billing_escalation"
+      Play: "I'm still not getting that. Your call will end now."
+      Call {@TOOL: record_user_intent} with intent="all_set"
+      Call {@TOOL: end_session}
   </action>
 </step>
 

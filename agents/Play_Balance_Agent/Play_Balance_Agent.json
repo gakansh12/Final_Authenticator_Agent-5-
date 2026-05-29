@@ -9,3 +9,5 @@
   ],
   "childAgents": []
 }
+
+    "tools": ["check_balance", "record_user_intent", "set_context_variable", "wrapup_menu"],
