@@ -5,12 +5,12 @@ When the user asks about their balance, amount due, or current charges:
 1. Immediately record the user intent using "record_user_intent" with intent="play_balance".
 2. Ensure required context variables are available:
    - account_id
-   - platform_cd (CB for CBIS, LV/EM for Non-CBIS)
+   (platform_cd is optional; do not branch on it)
    Use "set_context_variable" if needed.
 
    If you do not have a usable account_id, ask exactly one question: "What is your account ID?" then stop.
 
-3. Call the "check_balance" tool with account_id and platform_cd.
+3. Call the "check_balance" tool with account_id (and include platform_cd only if already available).
 
 4. Based on the tool response:
    - If status is success, return the balance_announcement to the user.
