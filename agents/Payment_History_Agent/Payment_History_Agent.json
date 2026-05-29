@@ -4,6 +4,7 @@
   "instruction": "agents/Payment_History_Agent/instruction.txt",
   "tools": [
     "call_payment_history_details",
+    "end_conversation",
     "record_user_intent",
     "set_context_variable",
     "wrapup_menu"

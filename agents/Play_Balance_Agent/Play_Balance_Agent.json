@@ -4,10 +4,9 @@
   "instruction": "agents/Play_Balance_Agent/instruction.txt",
   "tools": [
     "check_balance",
+    "end_conversation",
     "record_user_intent",
     "set_context_variable"
   ],
   "childAgents": []
 }
-
-    "tools": ["check_balance", "record_user_intent", "set_context_variable", "wrapup_menu"],

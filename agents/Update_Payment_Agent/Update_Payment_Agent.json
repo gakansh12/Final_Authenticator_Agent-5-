@@ -3,6 +3,7 @@
   "displayName": "Update_Payment_Agent",
   "instruction": "agents/Update_Payment_Agent/instruction.txt",
   "tools": [
+    "end_conversation",
     "record_user_intent",
     "set_context_variable",
     "wrapup_menu"
