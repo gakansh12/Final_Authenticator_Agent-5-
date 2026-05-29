@@ -1,0 +1,8 @@
+{
+  "name": "set-context-variable",
+  "pythonFunction": {
+    "name": "set_context_variable",
+    "pythonCode": "tools/set_context_variable/python_function/python_code.py"
+  },
+  "displayName": "set_context_variable"
+}

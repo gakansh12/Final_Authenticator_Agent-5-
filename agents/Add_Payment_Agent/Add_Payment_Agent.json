@@ -1,0 +1,16 @@
+{
+  "name": "add-payment-agent-uuid-v1",
+  "displayName": "Add_Payment_Agent",
+  "instruction": "agents/Add_Payment_Agent/instruction.txt",
+  "tools": [
+    "add_payment_interaction_handler",
+    "validate_and_route_card_number",
+    "format_and_route_expiry_date",
+    "call_generate_dv_token",
+    "call_process_payment_submit",
+    "record_user_intent",
+    "set_context_variable",
+    "evaluate_and_route_payment_methods"
+  ],
+  "childAgents": []
+}

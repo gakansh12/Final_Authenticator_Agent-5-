@@ -1,0 +1,10 @@
+{
+  "name": "a7b8c9d0-e1f2-3456-0123-456789012345",
+  "pythonFunction": {
+    "name": "call_payment_history_details",
+    "pythonCode": "tools/call_payment_history_details/python_function/python_code.py",
+    "description": "Fetches payment history for a member."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "call_payment_history_details"
+}

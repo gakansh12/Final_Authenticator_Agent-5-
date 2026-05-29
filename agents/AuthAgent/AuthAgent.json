@@ -1,0 +1,7 @@
+{
+  "name": "9a5c67d8-5ff5-4138-a727-1d3aefe2c8bc",
+  "displayName": "AuthAgent",
+  "instruction": "agents/AuthAgent/instruction.txt",
+  "tools": ["verify_caller_dob"],
+  "childAgents": ["humana-intent-repro-agent-1", "Premium_Billing_Router"]
+}

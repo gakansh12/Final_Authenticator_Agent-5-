@@ -1,0 +1,10 @@
+{
+  "name": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+  "pythonFunction": {
+    "name": "validate_and_route_card_number",
+    "pythonCode": "tools/validate_and_route_card_number/python_function/python_code.py",
+    "description": "Validates card number using Luhn algorithm and identifies card type."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "validate_and_route_card_number"
+}

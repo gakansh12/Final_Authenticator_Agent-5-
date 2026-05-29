@@ -1,0 +1,7 @@
+{
+  "name": "45c2b4bf-3fc6-4bc8-85fd-699ef6c2ff1c",
+  "displayName": "Root agent",
+  "instruction": "agents/Root_agent/instruction.txt",
+  "tools": ["end_session"],
+  "childAgents": ["AuthAgent"]
+}

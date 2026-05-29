@@ -1,0 +1,10 @@
+{
+  "name": "e5f6a7b8-c9d0-1234-ef01-123456789012",
+  "pythonFunction": {
+    "name": "call_process_payment_submit",
+    "pythonCode": "tools/call_process_payment_submit/python_function/python_code.py",
+    "description": "Submits payment method to backend for processing and storage."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "call_process_payment_submit"
+}

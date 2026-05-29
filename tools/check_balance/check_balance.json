@@ -1,0 +1,10 @@
+{
+  "name": "b1c2d3e4-f5a6-7890-1234-567890abcdef",
+  "pythonFunction": {
+    "name": "check_balance",
+    "pythonCode": "tools/check_balance/python_function/python_code.py",
+    "description": "Fetches current balance for a member."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "check_balance"
+}

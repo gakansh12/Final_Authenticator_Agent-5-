@@ -1,0 +1,10 @@
+{
+  "name": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "pythonFunction": {
+    "name": "add_payment_interaction_handler",
+    "pythonCode": "tools/add_payment_interaction_handler/python_function/python_code.py",
+    "description": "Handles payment collection interaction errors and returns recovery prompts."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "add_payment_interaction_handler"
+}

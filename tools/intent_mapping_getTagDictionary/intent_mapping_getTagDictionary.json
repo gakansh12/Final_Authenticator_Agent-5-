@@ -1,0 +1,8 @@
+{
+  "name": "intent-mapping-get-tag-dictionary",
+  "pythonFunction": {
+    "name": "intent_mapping_getTagDictionary",
+    "pythonCode": "tools/intent_mapping_getTagDictionary/python_function/python_code.py"
+  },
+  "displayName": "intent_mapping_getTagDictionary"
+}

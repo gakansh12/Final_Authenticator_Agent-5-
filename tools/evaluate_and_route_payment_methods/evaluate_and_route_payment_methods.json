@@ -1,0 +1,10 @@
+{
+  "name": "f6a7b8c9-d0e1-2345-f012-123456789012",
+  "pythonFunction": {
+    "name": "evaluate_and_route_payment_methods",
+    "pythonCode": "tools/evaluate_and_route_payment_methods/python_function/python_code.py",
+    "description": "Evaluates existing payment methods on file and determines routing."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "evaluate_and_route_payment_methods"
+}

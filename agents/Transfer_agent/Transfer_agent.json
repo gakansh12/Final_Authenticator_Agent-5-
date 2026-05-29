@@ -1,0 +1,6 @@
+{
+  "name": "a347d416-ee18-4955-86d4-a2761ba08604",
+  "displayName": "Transfer_agent",
+  "instruction": "agents/Transfer_agent/instruction.txt",
+  "tools": ["end_session"]
+}

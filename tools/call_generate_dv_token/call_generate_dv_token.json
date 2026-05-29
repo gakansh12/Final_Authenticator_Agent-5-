@@ -1,0 +1,10 @@
+{
+  "name": "d4e5f6a7-b8c9-0123-def0-123456789012",
+  "pythonFunction": {
+    "name": "call_generate_dv_token",
+    "pythonCode": "tools/call_generate_dv_token/python_function/python_code.py",
+    "description": "Generates a DV (data vault) token for secure card storage."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "call_generate_dv_token"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+  "pythonFunction": {
+    "name": "format_and_route_expiry_date",
+    "pythonCode": "tools/format_and_route_expiry_date/python_function/python_code.py",
+    "description": "Parses and validates expiry date in various formats."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "format_and_route_expiry_date"
+}

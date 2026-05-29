@@ -1,0 +1,7 @@
+{
+  "name": "94a227e4-3f43-4046-9cbc-71be65e619ca",
+  "displayName": "humana-intent-repro-agent-1",
+  "instruction": "agents/humana-intent-repro-agent-1/instruction.txt",
+  "tools": ["intent_mapping_getTagDictionary", "set_context_variable"],
+  "childAgents": ["Transfer_agent"]
+}

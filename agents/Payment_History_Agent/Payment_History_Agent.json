@@ -1,0 +1,11 @@
+{
+  "name": "payment-history-agent-uuid-v1",
+  "displayName": "Payment_History_Agent",
+  "instruction": "agents/Payment_History_Agent/instruction.txt",
+  "tools": [
+    "call_payment_history_details",
+    "record_user_intent",
+    "set_context_variable"
+  ],
+  "childAgents": []
+}

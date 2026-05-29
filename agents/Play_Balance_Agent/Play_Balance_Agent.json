@@ -1,0 +1,11 @@
+{
+  "name": "play-balance-agent-uuid-v1",
+  "displayName": "Play_Balance_Agent",
+  "instruction": "agents/Play_Balance_Agent/instruction.txt",
+  "tools": [
+    "check_balance",
+    "record_user_intent",
+    "set_context_variable"
+  ],
+  "childAgents": []
+}

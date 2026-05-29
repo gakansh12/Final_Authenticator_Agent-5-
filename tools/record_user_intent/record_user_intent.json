@@ -1,0 +1,10 @@
+{
+  "name": "b8c9d0e1-f234-5678-1234-567890123456",
+  "pythonFunction": {
+    "name": "record_user_intent",
+    "pythonCode": "tools/record_user_intent/python_function/python_code.py",
+    "description": "Records user intent for analytics and routing decisions."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "record_user_intent"
+}

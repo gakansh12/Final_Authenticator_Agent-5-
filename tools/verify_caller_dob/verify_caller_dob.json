@@ -1,0 +1,10 @@
+{
+  "name": "59938a97-d78a-489b-99b8-a3dfd266671b",
+  "pythonFunction": {
+    "name": "verify_caller_dob",
+    "pythonCode": "tools/verify_caller_dob/python_function/python_code.py",
+    "description": "Verifies a caller\u0027s identity using their account ID and date of birth.\n\nArgs:\n    account_id: The caller\u0027s account ID\n    date_of_birth: The caller\u0027s date of birth in DD/MM/YYYY format\n\nReturns:\n    A dict with verified (bool) and caller_name (str)"
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "verify_caller_dob"
+}

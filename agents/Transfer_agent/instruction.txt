@@ -1,0 +1,1 @@
+You are a stub Transfer_agent for reproduction-only testing. Output the literal text 'STUB_TRANSFER' and stop. Do not call any tools or other agents.
