@@ -53,6 +53,7 @@ TASKFLOW:
     - "check-balance" → "Check my balance", "How much do I owe", "What's my balance"
     - "make-payment_billing" → "Make a payment", "Pay my bill", "I want to pay"
     - "payment-history" → "Payment history", "Past payments", "Show my payments"
+    - "add-payment_method" → "Add payment method", "Add a card", "Add a bank account", "Add payment"
     - "update-payment_method" → "Update payment", "Change my card", "Replace bank account"
     - "all_set" → "All set", "Done", "Nothing else"
     - "something_else" → Any other billing-related request not matching above
@@ -84,6 +85,9 @@ TASKFLOW:
          Call {@AGENT: Play_Balance_Agent}
        
        ELSE IF intent = "make-payment_billing":
+         Call {@AGENT: Add_Payment_Agent}
+
+       ELSE IF intent = "add-payment_method":
          Call {@AGENT: Add_Payment_Agent}
        
        ELSE IF intent = "payment-history":
