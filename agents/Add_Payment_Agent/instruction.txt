@@ -81,8 +81,9 @@
                     Call {@TOOL: add_payment_interaction_handler} with sub_step_scope="payment_method_selection", verbiage_variant="ask_payment_method", interaction_type="INVALID"
                     Play returned prompt and repeat this step.
 
-                - IF tool fails:
-                    → Proceed to Ask_for_Card_or_ACH
+                - IF any tool call fails at this step (including quota/429/resource exhausted):
+                    Play: "I can’t help with adding a payment method right now."
+                    Return control to Premium_Billing_Router and STOP.
             </action>
         </step>
     </subtask>
@@ -153,6 +154,9 @@
                     - IF "proceed": Proceed to "Collect Expiration Date"
                     - IF "unsupported_card_type": Call {@TOOL: add_payment_interaction_handler} with sub_step_scope="card_number_collection", verbiage_variant="unsupported", interaction_type="INVALID"
                     - IF "card_invalid_length": Call {@TOOL: add_payment_interaction_handler} with sub_step_scope="card_number_collection", verbiage_variant="invalid_length", interaction_type="INVALID"
+                    - IF tool returns error (including quota/429/resource exhausted):
+                        Play: "I can’t help with adding a payment method right now."
+                        Return control to Premium_Billing_Router and STOP.
                 
                 - IF User Silence: 
                     Call {@TOOL: add_payment_interaction_handler} with sub_step_scope="card_number_collection", verbiage_variant="card_number", interaction_type="NO_INPUT"
@@ -161,6 +165,10 @@
                 - IF No Match: 
                     Call {@TOOL: add_payment_interaction_handler} with sub_step_scope="card_number_collection", verbiage_variant="card_number", interaction_type="INVALID"
                     Play returned prompt and repeat this step.
+
+                - IF any tool call fails at this step (including quota/429/resource exhausted):
+                    Play: "I can’t help with adding a payment method right now."
+                    Return control to Premium_Billing_Router and STOP.
             </action>
         </step>
         
@@ -187,6 +195,10 @@
 
     - IF success:
         Store the formatted expiry in `{card_expiry}` and proceed.
+
+    - IF tool returns error (including quota/429/resource exhausted):
+        Play: "I can’t help with adding a payment method right now."
+        Return control to Premium_Billing_Router and STOP.
 
     - IF "expiry_invalid":
         Call {@TOOL: add_payment_interaction_handler} with 
