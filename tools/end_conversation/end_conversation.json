@@ -1,0 +1,10 @@
+{
+  "name": "4f2f1b1a-0ad3-4a3b-9b62-9f0c2c1a2b74",
+  "pythonFunction": {
+    "name": "end_conversation",
+    "pythonCode": "tools/end_conversation/python_function/python_code.py",
+    "description": "Signals that the agent should end the current interaction/conversation."
+  },
+  "executionType": "SYNCHRONOUS",
+  "displayName": "end_conversation"
+}

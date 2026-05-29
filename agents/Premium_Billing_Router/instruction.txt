@@ -94,7 +94,7 @@ TASKFLOW:
        ELSE IF intent = "all_set":
          Play: "Thank you for using our billing services. Your call will end now."
          Call {@TOOL: record_user_intent} with intent="all_set"
-         Call {@TOOL: end_session}
+         Call {@TOOL: end_conversation}
   </action>
 </step>
 
@@ -109,7 +109,7 @@ TASKFLOW:
     ELSE IF second invalid input:
       Play: "I'm still not getting that. Your call will end now."
       Call {@TOOL: record_user_intent} with intent="all_set"
-      Call {@TOOL: end_session}
+      Call {@TOOL: end_conversation}
   </action>
 </step>
 

@@ -2,7 +2,7 @@
   "name": "premium-billing-router-uuid-v1",
   "displayName": "Premium_Billing_Router",
   "instruction": "agents/Premium_Billing_Router/instruction.txt",
-  "tools": ["set_context_variable", "record_user_intent", "end_session", "wrapup_menu"],
+  "tools": ["set_context_variable", "record_user_intent", "end_conversation", "wrapup_menu"],
   "childAgents": [
     "Add_Payment_Agent",
     "Play_Balance_Agent",

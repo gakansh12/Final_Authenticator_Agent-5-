@@ -104,7 +104,7 @@
                   - If next_intent = "payment_history": Call {@TOOL: record_user_intent} with intent="payment_history" then STOP.
                   - If next_intent = "add_payment_method": Call {@TOOL: record_user_intent} with intent="add_payment" then STOP.
                   - If next_intent = "update_payment_method": Call {@TOOL: record_user_intent} with intent="update_payment" then STOP.
-                  - If next_intent = "all_set": Call {@TOOL: record_user_intent} with intent="all_set" then Call {@TOOL: end_session} and STOP.
+                  - If next_intent = "all_set": Call {@TOOL: record_user_intent} with intent="all_set" then Call {@TOOL: end_conversation} and STOP.
             </action>
         </step>
     </subtask>

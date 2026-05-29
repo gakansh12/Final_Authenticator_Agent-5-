@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 
-def end_session(reason: str | None = None) -> dict:
-	"""End-session tool.
+def end_conversation(reason: str | None = None) -> dict:
+	"""End-conversation tool.
 
 	This tool is intentionally minimal: calling agents should treat this as a terminal
 	action and stop generating further steps.
@@ -13,7 +13,7 @@ def end_session(reason: str | None = None) -> dict:
 	Returns:
 		A small status payload that can be logged or surfaced by the runtime.
 	"""
-	payload: dict = {"status": "success", "action": "end_session"}
+	payload: dict = {"status": "success", "action": "end_conversation"}
 	if reason is not None and str(reason).strip():
 		payload["reason"] = str(reason).strip()
 	return payload
