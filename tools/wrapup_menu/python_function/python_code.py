@@ -1,9 +1,7 @@
-from __future__ import annotations
-
-from typing import Any, Dict, List, Optional
+from typing import Optional
 
 
-_MENU: List[Dict[str, str]] = [
+_MENU = [
 	{"id": "check_balance", "label": "Check balance"},
 	{"id": "payment_history", "label": "Check payment history"},
 	{"id": "add_payment_method", "label": "Add payment method"},
@@ -39,7 +37,7 @@ def _map_selection_to_intent(selection: str) -> Optional[str]:
 	return None
 
 
-def wrapup_menu(selection: Optional[str] = None, **_: Any) -> Dict[str, Any]:
+def wrapup_menu(selection: Optional[str] = None, **_):
 	"""Wrap-up menu tool.
 
 	Runtime expectation: the agent prints the menu to the user, collects a user reply,
