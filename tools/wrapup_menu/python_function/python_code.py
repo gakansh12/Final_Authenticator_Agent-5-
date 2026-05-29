@@ -37,7 +37,7 @@ def _map_selection_to_intent(selection: str) -> Optional[str]:
 	return None
 
 
-def wrapup_menu(selection: Optional[str] = None, **_):
+def wrapup_menu(selection: str) -> dict:
 	"""Wrap-up menu tool.
 
 	Runtime expectation: the agent prints the menu to the user, collects a user reply,
