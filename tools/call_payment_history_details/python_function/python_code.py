@@ -1,12 +1,11 @@
 from datetime import datetime
 
-def call_payment_history_details(account_id: str, platform_cd: str) -> dict:
+def call_payment_history_details(account_id: str) -> dict:
     """
     Fetches payment history for a member.
     
     Args:
         account_id: Member account ID
-        platform_cd: Platform code ("CB" for CBIS, "LV" or "EM" for Non-CBIS)
     
     Returns:
         Payment history announcement and details
@@ -23,12 +22,7 @@ def call_payment_history_details(account_id: str, platform_cd: str) -> dict:
             }
         
         # Simulate payment history for demonstration
-        if platform_cd == "CB":
-            # CBIS member - they view on website
-            announcement = "To view your past payments, please visit our website at humana one members dot com."
-        else:
-            # Non-CBIS member - provide recent payments
-            announcement = "Your recent payments are: May 15th, Two hundred dollars. April 10th, Two hundred dollars. March 5th, Two hundred dollars."
+        announcement = "Your recent payments are: May 15th, Two hundred dollars. April 10th, Two hundred dollars. March 5th, Two hundred dollars."
         
         return {
             "status": "success",
@@ -39,7 +33,6 @@ def call_payment_history_details(account_id: str, platform_cd: str) -> dict:
                 {"date": "2026-04-10", "amount": 200},
                 {"date": "2026-03-05", "amount": 200}
             ],
-            "platform_cd": platform_cd,
             "error": None
         }
     except Exception as e:

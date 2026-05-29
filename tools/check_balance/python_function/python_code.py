@@ -1,4 +1,4 @@
-def check_balance(account_id: str, platform_cd: str) -> dict:
+def check_balance(account_id: str) -> dict:
     """
     Fetches current balance for a member.
     """
@@ -17,20 +17,13 @@ def check_balance(account_id: str, platform_cd: str) -> dict:
         balance_amount = 325.75
         currency = "USD"
 
-        if platform_cd == "CB":
-            announcement = (
-                f"Your current balance is {balance_amount} dollars. "
-                "You can also view details on humana one members dot com."
-            )
-        else:
-            announcement = f"Your current balance is {balance_amount} dollars."
+        announcement = f"Your current balance is {balance_amount} dollars."
 
         return {
             "status": "success",
             "balance": balance_amount,
             "currency": currency,
             "balance_announcement": announcement,
-            "platform_cd": platform_cd,
             "error": None
         }
 
